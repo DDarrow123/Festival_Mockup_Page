@@ -13,11 +13,11 @@
   background-color: #fff;
   span {
     float: left;
-    margin: 30px 0 0 40px;
+    margin: 30px 0 0 50px;
   }
   .nav-bar-title {
     float: right;
-    margin: 30px 30px 0 0;
+    margin: 30px 50px 0 0;
     a {
       text-decoration: none;
       position: relative;
@@ -40,28 +40,51 @@
 /*End Nav Bar*/
 
 /*Botton Nav Bar*/
-.flex {
-  // align-items: flex-end;
+.vertical-text-bar {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  -ms-transform: rotate(90deg); /* IE 9 */
+  -webkit-transform: rotate(90deg); /* Safari 3-8 */
+  transform: rotate(90deg);
+  position: absolute;
+  bottom: 100px;
+  right: 0px;
+  width: 250px;
+  height: 100px;
+}
+.dates {
+  margin-bottom: 50px;
+  margin-left: 50px;
+}
+.bottom-nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
   height: 100px;
   width: 100%;
   background-color: pink;
-  .dates {
-    display: flex;
-    flex-direction: column;
-  }
   .topics {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
+    width: 100%;
+    margin-left: 50px;
   }
   .cities {
-    float: right;
+    width: 350px;
+    margin-right: 50px;
+    /*will add font here*/
   }
 }
 /*End Botton Nav Bar*/
 
 /*Carousel*/
 .carousel-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
   height: 650px;
   width: 100%;
+
+  .carousel-names {
+    font-size: 60px;
+  }
 }
