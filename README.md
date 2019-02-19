@@ -3,7 +3,7 @@
 ### I love challenging myself to reproduce mockups (especially those I love and admire!)
   - This mockup is inspired by Zhenya Rynzhuk
   - Link to her mockup on Dribble: https://dribbble.com/shots/4762175-One-Minimal-Festival-Homepage-Animation?utm_source=Clipboard_Shot&utm_campaign=Zhenya_Artem&utm_content=One%20Minimal%20Festival%20Homepage%20Animation&utm_medium=Social_Share
-  -- She's pretty awesome :) 
+  - She's pretty awesome :) 
 
 ### Link to Demo
 
