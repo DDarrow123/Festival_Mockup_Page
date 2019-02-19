@@ -9,15 +9,14 @@ class WordCarousel extends Component {
 
   componentDidMount() {
     let carouselContainer = document.querySelector(".carousel-container");
-    document.querySelector(".carousel-slider").scrollLeft = -100;
     carouselContainer.addEventListener("scroll", this.scrollHorizontally);
   }
 
   scrollHorizontally = e => {
     e = window.event || e;
     var delta = Math.max(-1, Math.min(1, e.wheelDelta || -e.detail));
-    document.querySelector(".carousel-slider").scrollLeft -= delta * 40; // Multiplied by 40
-    console.log(document.querySelector(".carousel-container").scrollLeft);
+    document.querySelector(".carousel-slider").scrollLeft -= delta * 60; // Multiplied by 60
+    // console.log(document.querySelector(".carousel-container").scrollLeft);
     e.preventDefault();
   };
 

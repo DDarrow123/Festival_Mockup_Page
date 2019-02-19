@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import FestivalLandingPage from "./containers/FestivalLandingPage";
+import FestivalLandingPage from "./components/FestivalLandingPage";
 
 class App extends Component {
   render() {

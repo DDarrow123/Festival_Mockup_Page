@@ -11,7 +11,9 @@ const NavBar = () => {
       />
       <span>One Minimal Festival</span>
       <span className="nav-bar-title">
-        <a href="#">Get tickets!</a>
+        <a href="https://minimal-fest.webflow.io/" target="_blank">
+          Get tickets!
+        </a>
       </span>
     </header>
   );
