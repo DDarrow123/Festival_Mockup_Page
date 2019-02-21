@@ -14,14 +14,13 @@ class WordCarousel extends Component {
 
   scrollHorizontally = e => {
     e = window.event || e;
-    var delta = Math.max(-1, Math.min(1, e.wheelDelta || -e.detail));
+    const delta = Math.max(-1, Math.min(1, e.wheelDelta || -e.detail));
     document.querySelector(".carousel-slider").scrollLeft -= delta * 60; // Multiplied by 60
-    // console.log(document.querySelector(".carousel-container").scrollLeft);
     e.preventDefault();
   };
 
   hoverOn = e => {
-    let exp = e.target.id;
+    const exp = e.target.id;
     switch (exp) {
       case "slide-4":
         this.setState({ slideOneAnimate: true });
@@ -35,7 +34,7 @@ class WordCarousel extends Component {
   };
 
   hoverOff = e => {
-    let exp = e.target.id;
+    const exp = e.target.id;
     switch (exp) {
       case "slide-4":
         this.setState({ slideOneAnimate: false });

@@ -1,3 +1,5 @@
+@import "./_variables.scss";
+@import "./_mixins.scss";
 /*Nav Bar*/
 .nav-bar {
   height: 100px;
@@ -44,11 +46,12 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  -ms-transform: rotate(90deg); /* IE 9 */
-  -webkit-transform: rotate(90deg); /* Safari 3-8 */
+  // -ms-transform: rotate(90deg); /* IE 9 */ - not necessary with sass
+  // -webkit-transform: rotate(90deg); /* Safari 3-8 */ - not necessary with sass
   transform: rotate(90deg);
   position: absolute;
-  bottom: 120px;
+  top: 600px;
+  bottom: 0px;
   right: 0px;
   width: 240px;
   height: 100px;
@@ -68,7 +71,7 @@
     margin-left: 50px;
   }
   .cities {
-    width: 350px;
+    width: 415px;
     margin-right: 50px;
     /*will add font here*/
   }
@@ -98,16 +101,16 @@
       margin-left: 10px;
     }
     .text-focus-in {
-      -webkit-animation: text-focus-in 1s cubic-bezier(0.55, 0.085, 0.68, 0.53)
-        both;
+      // -webkit-animation: text-focus-in 1s cubic-bezier(0.55, 0.085, 0.68, 0.53)
+      //   both;
       animation: text-focus-in 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
     }
     .jello-horizontal {
-      -webkit-animation: jello-horizontal 2s both;
+      // -webkit-animation: jello-horizontal 2s both;
       animation: jello-horizontal 2s both;
     }
     .vibrate-1 {
-      -webkit-animation: vibrate-1 0.3s linear infinite both;
+      // -webkit-animation: vibrate-1 0.3s linear infinite both;
       animation: vibrate-1 0.3s linear infinite both;
     }
   }
@@ -121,19 +124,7 @@
  * animation text-focus-in
  * ----------------------------------------
  */
-@-webkit-keyframes text-focus-in {
-  0% {
-    -webkit-filter: blur(12px);
-    filter: blur(12px);
-    opacity: 0;
-  }
-  100% {
-    -webkit-filter: blur(0px);
-    filter: blur(0px);
-    opacity: 1;
-  }
-}
-@keyframes text-focus-in {
+@include text-focus() {
   0% {
     -webkit-filter: blur(12px);
     filter: blur(12px);
@@ -151,37 +142,8 @@
  * animation jello-horizontal
  * ----------------------------------------
  */
-@-webkit-keyframes jello-horizontal {
-  0% {
-    -webkit-transform: scale3d(1, 1, 1);
-    transform: scale3d(1, 1, 1);
-  }
-  30% {
-    -webkit-transform: scale3d(1.25, 0.75, 1);
-    transform: scale3d(1.25, 0.75, 1);
-  }
-  40% {
-    -webkit-transform: scale3d(0.75, 1.25, 1);
-    transform: scale3d(0.75, 1.25, 1);
-  }
-  50% {
-    -webkit-transform: scale3d(1.15, 0.85, 1);
-    transform: scale3d(1.15, 0.85, 1);
-  }
-  65% {
-    -webkit-transform: scale3d(0.95, 1.05, 1);
-    transform: scale3d(0.95, 1.05, 1);
-  }
-  75% {
-    -webkit-transform: scale3d(1.05, 0.95, 1);
-    transform: scale3d(1.05, 0.95, 1);
-  }
-  100% {
-    -webkit-transform: scale3d(1, 1, 1);
-    transform: scale3d(1, 1, 1);
-  }
-}
-@keyframes jello-horizontal {
+
+@include jello-focus() {
   0% {
     -webkit-transform: scale3d(1, 1, 1);
     transform: scale3d(1, 1, 1);
@@ -217,33 +179,8 @@
  * animation vibrate-1
  * ----------------------------------------
  */
-@-webkit-keyframes vibrate-1 {
-  0% {
-    -webkit-transform: translate(0);
-    transform: translate(0);
-  }
-  20% {
-    -webkit-transform: translate(-2px, 2px);
-    transform: translate(-2px, 2px);
-  }
-  40% {
-    -webkit-transform: translate(-2px, -2px);
-    transform: translate(-2px, -2px);
-  }
-  60% {
-    -webkit-transform: translate(2px, 2px);
-    transform: translate(2px, 2px);
-  }
-  80% {
-    -webkit-transform: translate(2px, -2px);
-    transform: translate(2px, -2px);
-  }
-  100% {
-    -webkit-transform: translate(0);
-    transform: translate(0);
-  }
-}
-@keyframes vibrate-1 {
+
+@include vibrate-focus() {
   0% {
     -webkit-transform: translate(0);
     transform: translate(0);
@@ -304,8 +241,8 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    -ms-transform: rotate(90deg); /* IE 9 */
-    -webkit-transform: rotate(90deg); /* Safari 3-8 */
+    // -ms-transform: rotate(90deg); /* IE 9 */
+    // -webkit-transform: rotate(90deg); /* Safari 3-8 */
     transform: rotate(90deg);
     position: fixed;
     bottom: 80px;
